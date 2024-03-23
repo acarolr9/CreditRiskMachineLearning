@@ -111,7 +111,9 @@ Al analizar la participación de cada tipo de modelo en el cálculo de las Proba
 
 
 
-![](006.png)![](007.png)Es por esto que se decide trabajar en un modelo de scoring de comportamiento, dada su importancia para el banco y la identificación de deficiencias significativas en este ámbito. Sin embargo, considerando que este segmento de clientes es amplio e incluye a todos los clientes particulares y personas naturales con negocio pertenecientes a la entidad, se opta por enfocarse específicamente en el segmento de clientes que domicilian nómina o pensión en el banco (ver Ilustración 3).
+![](006.png)![](007.png)
+
+Es por esto que se decide trabajar en un modelo de scoring de comportamiento, dada su importancia para el banco y la identificación de deficiencias significativas en este ámbito. Sin embargo, considerando que este segmento de clientes es amplio e incluye a todos los clientes particulares y personas naturales con negocio pertenecientes a la entidad, se opta por enfocarse específicamente en el segmento de clientes que domicilian nómina o pensión en el banco (ver Ilustración 3).
 
 El segmento en cuestión adquiere una gran importancia para el banco por dos motivos fundamentales. En primer lugar, es el segmento que presenta la mayor exposición de capital, lo que implica que su desempeño financiero y los riesgos asociados tienen un impacto significativo en la salud general de la institución. En segundo lugar, este segmento se encuentra dentro de la estrategia a corto plazo del banco en términos de crecimiento. En consecuencia, se busca continuar expandiendo y fortaleciendo su presencia en dicho segmento, alineándose con los objetivos y directrices establecidos por la organización.
 ## <a name="_toc151738706"></a>2.3 Modelo actual
@@ -162,7 +164,9 @@ La segunda fuente de información es la base de datos transaccional, que registr
 
 
 
-![](011.png)Como se mencionó anteriormente, el área trabaja con diferentes targets según el enfoque del modelo. En este caso, y por decisión del área usuaria del modelo, se va a trabajar con un target de incumplimiento de 90 días con vista a 12 meses, lo cual se puede entender mediante la siguiente gráfica.
+![](011.png)
+
+Como se mencionó anteriormente, el área trabaja con diferentes targets según el enfoque del modelo. En este caso, y por decisión del área usuaria del modelo, se va a trabajar con un target de incumplimiento de 90 días con vista a 12 meses, lo cual se puede entender mediante la siguiente gráfica.
 
 Debido a la decisión de trabajar exclusivamente en el segmento vinculado, que, como mencionamos anteriormente, es el segmento más grande en cuota y cantidad de clientes, se opta por trabajar con una muestra de los clientes en cada trimestre. Para ello, se lleva a cabo una muestra estratificada simple con respecto a la fecha y al incumplimiento del cliente. De esta manera, la cantidad de clientes y la proporción de incumplimiento del proyecto serían las siguientes:
 
