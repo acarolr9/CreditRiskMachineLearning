@@ -116,32 +116,7 @@ Al analizar la participación de cada tipo de modelo en el cálculo de las Proba
 Es por esto que se decide trabajar en un modelo de scoring de comportamiento, dada su importancia para el banco y la identificación de deficiencias significativas en este ámbito. Sin embargo, considerando que este segmento de clientes es amplio e incluye a todos los clientes particulares y personas naturales con negocio pertenecientes a la entidad, se opta por enfocarse específicamente en el segmento de clientes que domicilian nómina o pensión en el banco (ver Ilustración 3).
 
 El segmento en cuestión adquiere una gran importancia para el banco por dos motivos fundamentales. En primer lugar, es el segmento que presenta la mayor exposición de capital, lo que implica que su desempeño financiero y los riesgos asociados tienen un impacto significativo en la salud general de la institución. En segundo lugar, este segmento se encuentra dentro de la estrategia a corto plazo del banco en términos de crecimiento. En consecuencia, se busca continuar expandiendo y fortaleciendo su presencia en dicho segmento, alineándose con los objetivos y directrices establecidos por la organización.
-## <a name="_toc151738706"></a>2.3 Modelo actual
-El modelo actual de ALFA Scoring fue desarrollado por la consultora AIS en 2014, utilizando información histórica del comportamiento de los clientes en el banco entre los años 2010 y 2012. Este modelo fue implementado en producción en 2015 y se divide en tres segmentos: clientes con únicamente productos de pasivo (cuentas de ahorro, cuentas corrientes, fondos de inversión o CDTs), clientes con productos del activo que domicilian la nómina o pensión con el banco (vinculados), y clientes del activo que no domicilian nómina ni pensión con el banco (no vinculados).
 
-El modelo actual está compuesto por tres regresiones logísticas independientes, y la ponderación por bloque informacional y su composición se puede observar en la ilustración 4.
-
-![](008.png)
-
-**Ilustración 4:** Distribución y pesos del modelo actual
-### <a name="_toc151738707"></a>2.3.1 Desempeño del modelo actual
-Actualmente, el modelo de score comportamental presenta el siguiente desempeño en términos de Gini para los últimos meses evaluados, según se muestra en la Tabla 2.
-
-![](009.png)
-
-**Tabla 2** Desempeño de los modelos actuales de Scoring.
-
-Además, como se mencionó, este modelo se utiliza para generar campañas de preaprobado. Para esto, la calificación del score se asigna a grupos de riesgo del 1 al 6 para los segmentos de activo y del 1 al 10 para el segmento pasivo, siendo los primeros grupos los de menor riesgo. En la Tabla 3, se puede observar cómo se califican los clientes en los diferentes grupos durante un período y quiénes serían los clientes ofertables de acuerdo a las políticas de riesgo definidas por el banco.
-
-![](010.png)
-
-**Tabla 3** Grupo de riesgo de los modelos actuales de Scoring
-
-Considerando lo expuesto, se observa que el 53% de los clientes están siendo categorizados con una alta probabilidad de incumplimiento, mientras que la tasa de morosidad en entidades financieras reales es aproximadamente del 5%  (Experian, 2022) . Esto tiene un impacto directo en dos de los objetivos mencionados previamente: en primer lugar, en el crecimiento de la base de clientes, ya que existen muchos clientes potenciales que no están siendo adecuadamente evaluados por el modelo; en segundo lugar, en la correcta aplicación de datos y tecnología, aspectos que se encuentran ausentes en el modelo actual.
-# <a name="_toc428793021"></a><a name="_toc151738708"></a>3. Trabajos relacionados
-La predicción de riesgo crediticio y la búsqueda de las mejores estrategias para cumplir con esta tarea han sido ampliamente estudiadas a lo largo de los años, debido a la importancia que tienen tanto para las entidades financieras como para el sostenimiento y buen funcionamiento del mercado bursátil en general. En este contexto, las instituciones financieras tradicionales suelen utilizar principalmente la regresión logística como metodología de desarrollo. Esta técnica utiliza una gran cantidad de datos históricos para describir el nivel de ingresos del usuario, la capacidad de pago, el estado crediticio y otros indicadores. Luego, se dividen estos indicadores en varios niveles, generando así una tarjeta de puntuación de riesgo (scorecard) (Jian, Haibin, Zhijun, & Lei, 2021).
-
-Con el desarrollo de las finanzas por Internet, la aplicación de métodos de aprendizaje automático (Nedellec et al. 1994; Boz et al. 2018; Shukla y Nanda 2019), por ejemplo, Árbol de decisión (Kruppa et al. 2013), Red neuronal (Luo, Wu y Wu 2016), Montecarlo (Andrade y Sicsú 2008) y Extreme Gradient Boosting (XGBoost) (Liu, Huang y Xie 2019; Qiu 2019), en la predicción del riesgo de crédito financiero comienza a florecer. Estos métodos tienen sus propias ventajas y desventajas (Zhang et al. 2007; Tran, Duong y Ho 2016; Wang et al. 2017; Li Y. 2019b; Hindistán et al. 2019; Wang et al. 2019a). Sin embargo, la aplicación de análisis de redes sociales (SNA) o el impacto ecológico de las diferentes metodologías son temas que no se han desarrollo a profundidad en la literatura y que solo cuentan con algunos pocos estudios.
 ## <a name="_toc151738709"></a>3.1 Análisis de redes sociales para la predicción de riesgo 
 El análisis de redes sociales en el contexto de las instituciones financieras ha sido objeto de atención principalmente en lo que respecta a la evaluación del contagio del riesgo entre dichas instituciones. Esto se evidencia en trabajos como el desarrollado por Bhattacharya, Inekwe y Valenzuela en 2020 o el desarrollado por Bundi en 2016. No obstante, estos estudios no se han llevado a cabo a nivel minorista debido a la complejidad que puede generar la granularidad de las interacciones. Es importante destacar que solo en la última década se ha logrado adentrarse en detalle en esta granularidad.
 
